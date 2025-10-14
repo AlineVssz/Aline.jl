@@ -1,0 +1,7 @@
+name = "Aline"
+uuid = "01e4e282-a1b7-4c2d-880e-63c63ef1610f"
+authors = ["AlineVissuzaine <aline.vissuzaine@gmail.com>"]
+version = "0.0.1"
+
+[compat]
+julia = "1.10"
