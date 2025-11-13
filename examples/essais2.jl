@@ -9,7 +9,7 @@ ncol = names(train)[.!any.(ismissing, eachcol(train))] #le any.(ismissing) me pe
 essais= train[:, ncol] #on ne prend que les lignes dont aucunes valeurs ne sont manquantes
 essais= select!(essais, Not([:Id]))
 n2, p2 = size(essais)
-nvtrain=zeros(n2, p2)
+
 
 
 donn_quanti= names(essais, Number)
@@ -25,10 +25,10 @@ end
 for e in donn_quali
     num=length(unique(essais[!, e])) #on regarde combien de valeurs différentes il existe pour chaque colonne des donnes quali
     liste=unique(essais[!, e])
-    for i in 1:num
+    for i in 1:num-1
+        col_enc=zeros(n2)
+        col_name = string(e, "_", liste[i])
         for k in 1:n2
-            col_enc=zeros(n2, 1)
-            col_name = string(e, "_", liste[i])
             if essais[!, e][k]==liste[i]
                 col_enc[k]=1
             end
