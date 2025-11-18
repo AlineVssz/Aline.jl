@@ -24,7 +24,7 @@ end
 
 for e in donn_quali
     num=length(unique(essais[!, e])) #on regarde combien de valeurs différentes il existe pour chaque colonne des donnes quali
-    liste=unique(essais[!, e])
+    liste=unique(essais[!, e]) #on regarde les différentes valeurs de chacunes de nos colonnes
     for i in 1:num-1
         col_enc=zeros(n2)
         col_name = string(e, "_", liste[i])
@@ -36,6 +36,7 @@ for e in donn_quali
         end
     end
 end
+
 
 function mean(x)
     mean= sum(x)/length(x)

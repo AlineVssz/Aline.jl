@@ -1,7 +1,11 @@
 module Aline 
 
-export hello
+using CSV
+using DataFrames
 
-include("hello.jl")
+export lire
+export encoder
 
+include("lire.jl")
+include("encode.jl")
 end

@@ -1,3 +1,3 @@
 using Aline
 
-hello("remy")
+train =lire("data/train.csv")
