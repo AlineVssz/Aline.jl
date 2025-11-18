@@ -1,3 +1,6 @@
 using Aline
 
-train =lire("data/train.csv")
+train =tout("data/train.csv")
+
+target= train[:, :SalePrice]
+restevar= select(train, Not(:SalePrice))
