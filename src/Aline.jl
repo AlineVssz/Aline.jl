@@ -12,7 +12,6 @@ export predire
 export coeff
 export top5_variables
 export prediction_interface
-#export coeffs5_interface
 export entrainer_interface
 
 include("lire.jl")

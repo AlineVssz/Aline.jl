@@ -41,6 +41,8 @@ app = App() do
         DOM.br(),
         bouton,
         DOM.br(),
-        DOM.p(resultat[], style="font-weight: bold; margin-top: 10px; text-align: center;")
+        map(resultat) do txt
+            DOM.h2(txt, style="font-weight: bold; margin-top: 10px; text-align: center;")
+        end
     )
 end
